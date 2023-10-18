@@ -1,15 +1,15 @@
-package de.telran.lesson16;
+package de.telran.lesson16.newer;
 
 public class Auto {
-    String color; //Color your Auto
-    String model; //Model
+    public String color; //Color your Auto
+    public String model; //Model
     int mileage;
     int passengersCount; //Quantity of the passengers
-    int tankVolume; //Available tank capacity
-    int fuelConsumption; //Amount of the fuel consumption in Liter per 100 km
+    public int tankVolume; //Available tank capacity
+    public int fuelConsumption; //Amount of the fuel consumption in Liter per 100 km
     int maxSpeed;
-    int weightAuto; //Total weight of the Auto
-    int carriageCapacity; //How many kilo this car is capable to carry
+    public int weightAuto; //Total weight of the Auto
+    public int carriageCapacity; //How many kilo this car is capable to carry
 
     public Auto(int tankVolume, int fuelConsumption, int weightAuto, int carriageCapacity) {
         this.tankVolume = tankVolume;
@@ -33,17 +33,22 @@ public class Auto {
         this.carriageCapacity = carriageCapacity;
     }
 
-    void move() {
+    public void move() {
         System.out.println("Автомобиль едет и проедет " + tankVolume / fuelConsumption * 100 + " км.");
+        System.out.println("Если Автомобиль едет с максимальной скоростью " +maxSpeed+ " то он проедет " + getLenghtMaxSpeed()+ " км.");
 
         //Метод для расчета веса груза, который может перевезти автомобиль
     }
 
-    int getCountCargo() {
+    public int getCountCargo() {
         return carriageCapacity - weightAuto;
     }
 
-    int getMaxPassengersCount() {
+    public int getMaxPassengersCount() {
         return getCountCargo() / 100;
+    }
+
+    private double getLenghtMaxSpeed() {
+        return (double) tankVolume / fuelConsumption * 100 * 0.8;
     }
 }

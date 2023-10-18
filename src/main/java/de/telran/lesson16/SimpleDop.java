@@ -1,5 +1,7 @@
 package de.telran.lesson16;
 
+import de.telran.lesson16.newer.Auto;
+
 public class SimpleDop {
     public static void main(String[] args) {
 
