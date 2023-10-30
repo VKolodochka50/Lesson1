@@ -32,7 +32,7 @@ public class RandomSimple {
 
     }
 
-    static int generateIntRandomInterval(int min, int max) {
+    public static int generateIntRandomInterval(int min, int max) {
         Random random = new Random();
         int result = random.nextInt(max - min) + min;
         return result;
